@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Twenty Nine QR Codes!</title>
+
+  <style>
+    html,
+    head,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    #main {
+      font-family: 'Courier New', Courier, monospace;
+      margin: 1rem;
+      height: 90%;
+    }
+
+    #img {
+      text-align: center;
+      width: min(585px, 100%);
+    }
+
+    #title {
+      margin-top: 5rem;
+    }
+
+    #title,
+    #content {
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div align="center" id="main">
+    <img src="./background.png" alt="D29 Logo" id="img" />
+    <h1 id="title" id="title"></h1>
+    <h2 id="content" id="content"></h2>
+  </div>
+
+  <script defer>
+    const titles = {
+      1: "Parabéns, você achou um QR code!",
+      2: "Parabéns, você achou um QR code!",
+      3: "Parabéns, você achou um QR code!",
+      4: "Parabéns, você achou um QR code!",
+      5: "Parabéns, você achou um QR code!",
+      6: "Parabéns, você achou um QR code!",
+      7: "Parabéns, você achou um QR code!",
+      8: "Parabéns, você achou um QR code!",
+      9: "Parabéns, você achou um QR code!",
+      10: "Parabéns, você achou um QR code!",
+      11: "Parabéns, você achou um QR code!",
+      12: "Parabéns, você achou um QR code!",
+      13: "Parabéns, você achou um QR code!",
+      14: "Parabéns, você achou um QR code!",
+      15: "Parabéns, você achou um QR code!"
+    }
+
+    const contents = {
+      1: "Leve até a barraca e ganhe um ",
+      2: "Leve até a barraca e ganhe um ",
+      3: "Leve até a barraca e ganhe um ",
+      4: "Leve até a barraca e ganhe um ",
+      5: "Leve até a barraca e ganhe um ",
+      6: "Leve até a barraca e ganhe um ",
+      7: "Leve até a barraca e ganhe um ",
+      8: "Leve até a barraca e ganhe um ",
+      9: "Leve até a barraca e ganhe um ",
+      10: "Leve até a barraca e ganhe um ",
+      11: "Leve até a barraca e ganhe um ",
+      12: "Leve até a barraca e ganhe um ",
+      13: "Leve até a barraca e ganhe um ",
+      14: "Leve até a barraca e ganhe um ",
+      15: "Leve até a barraca e ganhe um "
+    }
+
+    const title = document.getElementById('title');
+    const content = document.getElementById('content');
+
+    let id = Number(window.location.hash.substring(1))
+
+    if (!id) {
+      id = window.location.hash = '1';
+    }
+
+    title.innerText = titles[id]
+    content.innerText = contents[id]
+  </script>
+</body>
+
+</html>
