@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Twenty Nine QR Codes!</title>
+  <meta name="color-scheme" content="light only">
+  <title>Twenty Nine QRCodes</title>
 
   <style>
+    :root {
+      color-scheme: light only;
+    }
+
     html,
     head,
     body {
@@ -16,10 +20,10 @@
       margin: 0;
       padding: 0;
       background-color: rgb(187, 221, 221);
+      font-family: 'Courier New', Courier, monospace;
     }
 
     #main {
-      font-family: 'Courier New', Courier, monospace;
       margin: 1rem;
     }
 
@@ -37,6 +41,12 @@
       width: 100%;
       text-align: center;
     }
+
+    #footer {
+      position: absolute;
+      bottom: 0;
+      font-size: 2rem;
+    }
   </style>
 </head>
 
@@ -44,8 +54,11 @@
   <div align="center" id="main">
     <img src="./background.png" alt="D29 Logo" id="img" />
     <h1 id="title" id="title"></h1>
+    <br />
     <h2 id="content" id="content"></h2>
   </div>
+
+  <div id="footer"></div>
 
   <script defer>
     const titles = {
@@ -86,6 +99,7 @@
 
     const title = document.getElementById('title');
     const content = document.getElementById('content');
+    const footer = document.getElementById('footer')
 
     let id = Number(window.location.hash.substring(1))
 
@@ -95,6 +109,7 @@
 
     title.innerText = titles[id]
     content.innerText = contents[id]
+    footer.innerText = `#${id}`
   </script>
 </body>
 
