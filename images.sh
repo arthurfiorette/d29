@@ -7,4 +7,4 @@ do
   amzqr https://arthurfiorette.github.io/d29\#$I -p ./background-white.png -c -v 10 -d qrcodes -n qrcode-$I.png;
 done
 
-amzqr https://arthurfiorette.github.io/feedback -p ./background-white.png -c -v 10 -d qrcodes -n qrcode-feedback.png;
+amzqr https://arthurfiorette.github.io/d29/feedback -p ./background-white.png -c -v 10 -d qrcodes -n qrcode-feedback.png;
