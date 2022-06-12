@@ -19,8 +19,17 @@
       width: 100%;
       margin: 0;
       padding: 0;
-      background-color: rgb(187, 221, 221);
+      background-color: rgb(187, 221, 221) !important;
       font-family: 'Courier New', Courier, monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+      html,
+      head,
+      body {
+        background-color: rgb(187, 221, 221) !important;
+      }
     }
 
     #main {
@@ -56,9 +65,8 @@
     <h1 id="title" id="title"></h1>
     <br />
     <h2 id="content" id="content"></h2>
+    <div id="footer"></div>
   </div>
-
-  <div id="footer"></div>
 
   <script defer>
     const titles = {
